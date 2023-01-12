@@ -1,6 +1,6 @@
 {
   "name": "ionic-plugin-deeplinks",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "cordova": {
     "id": "ionic-plugin-deeplinks",
     "platforms": [
@@ -8,7 +8,7 @@
       "ios"
     ]
   },
-  "description": "Ionic Deeplinks Plugin",
+  "description": "Ionic Deeplinks Plugin (RCM)",
   "repository": "https://github.com/ionic-team/ionic-plugin-deeplinks.git",
   "issue": "https://github.com/ionic-team/ionic-plugin-deeplinks/issues",
   "keywords": [

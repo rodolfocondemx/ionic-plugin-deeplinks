@@ -38,6 +38,8 @@ var IonicDeeplink = {
     var self = this;
     this.paths = paths;
 
+    console.log('DEEPLINK PLUGIN: route: paths:', paths);
+
     this.onDeepLink(function (data) {
       var realPath = self._getRealPath(data);
 
@@ -46,6 +48,8 @@ var IonicDeeplink = {
       var matched = false;
       var finalArgs;
       var pathData;
+
+      console.log('DEEPLINK PLUGIN: onDeepLink callback: realPath:', realPath, 'args:', args);
 
       for (var targetPath in paths) {
         pathData = paths[targetPath];
@@ -78,7 +82,7 @@ var IonicDeeplink = {
         console.log('No Match found');
         error({ $link: data });
       }
-    })
+    });
   },
 
   routeWithNavController: function (navController, paths, options, success, error) {
@@ -124,6 +128,8 @@ var IonicDeeplink = {
       return {};
     }
 
+    console.log('DEEPLINK PLUGIN: routeMatch: route:', route, 'path:', path);
+
     var parts = path.split('/');
     var routeParts = route.split('/');
 
@@ -153,6 +159,7 @@ var IonicDeeplink = {
         return false;
       }
     }
+
     return routeParams;
   },
 
