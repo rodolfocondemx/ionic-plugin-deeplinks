@@ -68,6 +68,7 @@ public class IonicDeeplink extends CordovaPlugin {
     String action = intent.getAction();
     Uri url = intent.getData();
     JSONObject bundleData = this._bundleToJson(intent.getExtras());
+    
     Log.d(TAG, "Got a new intent: " + intentString + " " + intent.getScheme() + " " + action + " " + url);
 
     // if app was not launched by the url - ignore

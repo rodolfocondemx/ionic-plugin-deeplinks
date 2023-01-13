@@ -38,7 +38,7 @@ var IonicDeeplink = {
     var self = this;
     this.paths = paths;
 
-    console.log('DEEPLINK PLUGIN: route: paths:', paths);
+    console.log('DEEPLINK PLUGIN: route: paths:', JSON.stringify(paths));
 
     this.onDeepLink(function (data) {
       var realPath = self._getRealPath(data);
@@ -49,7 +49,7 @@ var IonicDeeplink = {
       var finalArgs;
       var pathData;
 
-      console.log('DEEPLINK PLUGIN: onDeepLink callback: realPath:', realPath, 'args:', args);
+      console.log('DEEPLINK PLUGIN: onDeepLink callback: realPath:', realPath, 'args:', JSON.stringify(args));
 
       for (var targetPath in paths) {
         pathData = paths[targetPath];
